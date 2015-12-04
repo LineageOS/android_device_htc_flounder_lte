@@ -29,7 +29,6 @@ TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
-TARGET_PREBUILT_KERNEL := false
 
 # Assert for recovery compatibility
 TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
@@ -42,17 +41,13 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
 	device/htc/flounder/overlay-cm
 
-# Enable USB OTG (CAF commit to Settings)
-ADDITIONAL_BUILD_PROPERTIES += \
-	persist.sys.isUsbOtgEnabled=true
-
 # Inherrit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
 
 # LTE Overlays 
 DEVICE_PACKAGE_OVERLAYS += \
-	$(LOCAL_PATH)/lte_only_overlay
+	device/htc/flounder/lte_only_overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
