@@ -17,7 +17,7 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, vendor/cm/config/telephony.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+# $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder64.mk)
@@ -54,9 +54,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:6.0.1/MOB31E/3142026:user/release-keys \
-    PRIVATE_BUILD_DESC="volantisg-user 6.0.1 MOB31E 3142026 release-keys" \
-    BUILD_ID=MOB31E
+    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/NMF26F/3425388:user/release-keys \
+    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 NMF26F 3425388 release-keys" \
+    BUILD_ID=NMF26F
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_flounder_lte
