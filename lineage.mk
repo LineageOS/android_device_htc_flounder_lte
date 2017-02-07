@@ -1,4 +1,5 @@
 # Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,8 +52,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/NMF26F/3425388:user/release-keys \
-    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 NMF26F 3425388 release-keys"
+    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/NMF26Q/3623443:user/release-keys \
+    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 NMF26Q 3623443 release-keys"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_flounder_lte
