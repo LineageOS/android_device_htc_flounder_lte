@@ -13,42 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Base on flounder
+$(call inherit-product, device/htc/flounder/lineage.mk)
+
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, vendor/cm/config/telephony.mk)
-
-# Inherit device configuration
-$(call inherit-product, device/htc/flounder/aosp_flounder64.mk)
-
-# Symlink /vendor partition to /system/vendor
-BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
-
-# Inline kernel building
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
-TARGET_KERNEL_SOURCE := kernel/htc/flounder
-TARGET_KERNEL_CONFIG := lineage_flounder_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
 
 # Assert for recovery compatibility
 TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
 
-# Extra Packages
-PRODUCT_PACKAGES += \
-	com.android.nfc_extras
-
-# CM Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-	device/htc/flounder/overlay-cm
-
-# Inherrit LTE config
+# Inherit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
-
 # LTE Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-	device/htc/flounder/lte_only_overlay
+    device/htc/flounder/lte_only_overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
