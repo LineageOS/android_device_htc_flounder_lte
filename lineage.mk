@@ -1,26 +1,29 @@
-# Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# CyanogenMod Specific Changes
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2048
+TARGET_SCREEN_WIDTH := 1536
+
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.cpp.duplication=false
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, vendor/cm/config/telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/htc/flounder/aosp_flounder64.mk)
+$(call inherit-product, device/htc/flounder/aosp_flounder.mk)
 
-# Symlink /vendor partition to /system/vendor
+$(call inherit-product-if-exists, vendor/htc/flounder/device-vendor.mk)
+
 BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 
 # Inline kernel building
@@ -30,22 +33,19 @@ TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := lineage_flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
-
+TARGET_PREBUILT_KERNEL := false
 # Assert for recovery compatibility
 TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
 
 # Extra Packages
 PRODUCT_PACKAGES += \
-	com.android.nfc_extras
+    com.android.nfc_extras
 
 # CM Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-	device/htc/flounder/overlay-cm
-
+DEVICE_PACKAGE_OVERLAYS += device/htc/flounder/overlay-cm
 # Inherrit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
-
 # LTE Overlays
 DEVICE_PACKAGE_OVERLAYS += \
 	device/htc/flounder/lte_only_overlay
