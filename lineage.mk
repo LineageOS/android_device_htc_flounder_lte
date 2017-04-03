@@ -30,9 +30,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/htc/flounder/lte_only_overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/N4F26T/3687331:user/release-keys \
-    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 N4F26T 3687331 release-keys"
+    PRODUCT_NAME=flounder \
+    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/N4F26X/3821951:user/release-keys \
+    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 N4F26X 3821951 release-keys"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_flounder_lte
