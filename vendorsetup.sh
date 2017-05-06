@@ -15,5 +15,5 @@
 #
 
 add_lunch_combo aosp_flounder_lte-userdebug
-add_lunch_combo cm_flounder_lte-userdebug
+add_lunch_combo lineage_flounder_lte-userdebug
 
