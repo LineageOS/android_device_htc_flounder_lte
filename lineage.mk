@@ -31,8 +31,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/N4F27I/4072761:user/release-keys \
-    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 N4F27I 4072761 release-keys"
+    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/N4F27K/4108841:user/release-keys \
+    PRIVATE_BUILD_DESC="volantisg-user 7.1.1 N4F27K 4108841 release-keys"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_flounder_lte
