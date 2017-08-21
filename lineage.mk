@@ -16,8 +16,8 @@
 # Base on flounder
 $(call inherit-product, device/htc/flounder/lineage.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/telephony.mk)
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/telephony.mk)
 
 # Assert for recovery compatibility
 TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
