@@ -29,8 +29,10 @@ $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
-    BUILD_FINGERPRINT=google/volantisg/flounder_lte:7.1.1/N4F27P/4333386:user/release-keys \
     PRIVATE_BUILD_DESC="volantisg-user 7.1.1 N4F27P 4333386 release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := google/volantisg/flounder_lte:7.1.1/N4F27P/4333386:user/release-keys
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_flounder_lte
