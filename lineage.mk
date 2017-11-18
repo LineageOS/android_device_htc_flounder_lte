@@ -24,10 +24,8 @@ TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
 
 # Inherit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
+
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
-# LTE Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    device/htc/flounder/lte_only_overlay
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=flounder_lte \
