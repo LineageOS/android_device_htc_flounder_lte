@@ -15,6 +15,11 @@
 # limitations under the License.
 #
 
+set -e
+
+# Required!
+export DEVICE=flounder_lte
+
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
