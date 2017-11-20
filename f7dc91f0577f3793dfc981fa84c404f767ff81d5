@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc1b94c0_ee419375",
+        "filename": "device-proprietary-files.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-11-20T22:48:44Z",
+      "side": 1,
+      "message": "From all these exec, only qcks, qmuxd and netmgrd are related to a service defined in init.flounder.rc. Do you feel comfortable to remove them or shall we keep it?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 20
+      },
+      "revId": "f7dc91f0577f3793dfc981fa84c404f767ff81d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
