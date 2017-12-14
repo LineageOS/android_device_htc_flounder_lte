@@ -1,5 +1,21 @@
 # Device-specific proprietary files - from N4F27P factory image, unless pinned
 
+# GPS
+lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
+lib64/libgeofence.so:vendor/lib64/libgeofence.so
+lib64/libgps.utils.so:vendor/lib64/libgps.utils.so
+lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so
+lib64/libloc_core.so:vendor/lib64/libloc_core.so
+lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so
+lib64/libloc_eng.so:vendor/lib64/libloc_eng.so
+lib/hw/gps.default.so:vendor/lib/hw/gps.default.so
+lib/libgeofence.so:vendor/lib/libgeofence.so
+lib/libgps.utils.so:vendor/lib/libgps.utils.so
+lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
+lib/libloc_core.so:vendor/lib/libloc_core.so
+lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so
+lib/libloc_eng.so:vendor/lib/libloc_eng.so
+
 # QMI
 vendor/bin/irsc_util
 vendor/lib64/libdiag.so
@@ -62,12 +78,14 @@ vendor/lib64/libCommandSvc.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libhtc_common.so
 vendor/lib64/libnetmgr.so
+vendor/lib64/libmdmdetect.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/librmnetctl.so
 vendor/lib64/libxml.so
 vendor/lib/libCommandSvc.so
 vendor/lib/libconfigdb.so
 vendor/lib/libhtc_common.so
+vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librmnetctl.so
@@ -103,6 +121,10 @@ vendor/firmware/mdm/image/rcdata_tmo.img
 vendor/firmware/mdm/image/mba.mbn
 vendor/firmware/mdm/image/rcdata_ul.img
 vendor/firmware/mdm/radiover.cfg
+
+# Peripheral manager
+vendor/lib64/libperipheral_client.so
+vendor/lib/libperipheral_client.so
 
 # Time services
 vendor/bin/time_daemon
