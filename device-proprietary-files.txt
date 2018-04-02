@@ -1,15 +1,15 @@
 # Device-specific proprietary files - from N4F27P factory image, unless pinned
 
-# GPS
+# GPS - some files from bullhead - OPM3.171019.016
 etc/SuplRootCert
-lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
+lib64/hw/gps.msm8992.so:vendor/lib64/hw/gps.default.so|02341bdaaf0beebe5da49fcbc214421c7b41b689
 lib64/libgeofence.so:vendor/lib64/libgeofence.so
 lib64/libgps.utils.so:vendor/lib64/libgps.utils.so
 lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so
 lib64/libloc_core.so:vendor/lib64/libloc_core.so
 lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so
 lib64/libloc_eng.so:vendor/lib64/libloc_eng.so
-lib/hw/gps.default.so:vendor/lib/hw/gps.default.so
+lib/hw/gps.msm8992.so:vendor/lib/hw/gps.default.so|ec1a259189871186f3f44025e4d1c4b9ea95bced
 lib/libgeofence.so:vendor/lib/libgeofence.so
 lib/libgps.utils.so:vendor/lib/libgps.utils.so
 lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
@@ -20,6 +20,7 @@ lib/libloc_eng.so:vendor/lib/libloc_eng.so
 # QMI
 vendor/bin/irsc_util
 vendor/lib64/libdiag.so
+vendor/lib64/libdsnetutils.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsucsd.so
 vendor/lib64/libdsutils.so
@@ -36,6 +37,7 @@ vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib/libdiag.so
+vendor/lib/libdsnetutils.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsucsd.so
 vendor/lib/libdsutils.so
